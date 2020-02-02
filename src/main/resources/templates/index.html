@@ -1,0 +1,151 @@
+<!doctype html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title th:text="${config.title}"></title>
+    <meta name="keywords" th:content="${config.keyword}"/>
+    <meta name="description" th:content="${config.description}"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/css/base.css" rel="stylesheet">
+    <link href="/css/index.css" rel="stylesheet">
+    <link href="/css/m.css" rel="stylesheet">
+    <script src="/js/jquery.min.js" type="text/javascript"></script>
+    <script src="/js/jquery.easyfader.min.js"></script>
+    <script src="/js/scrollReveal.js"></script>
+    <script src="/js/common.js"></script>
+    <script src="/js/comm.js"></script>
+    <!--[if lt IE 9]>
+    <script src="/js/modernizr.js"></script>
+    <![endif]-->
+</head>
+<body>
+<!--引入头部-->
+<!--
+　　　　　　　 ┏┓       ┏┓+ +
+　　　　　　　┏┛┻━━━━━━━┛┻┓ + +
+　　　　　　　┃　　　　　　 ┃
+　　　　　　　┃　　　━　　　┃ ++ + + +
+　　　　　　 █████━█████  ┃+
+　　　　　　　┃　　　　　　 ┃ +
+　　　　　　　┃　　　┻　　　┃
+　　　　　　　┃　　　　　　 ┃ + +
+　　　　　　　┗━━┓　　　 ┏━┛
+                ┃　　  ┃
+　　　　　　　　　┃　　  ┃ + + + +
+　　　　　　　　　┃　　　┃　Code is far away from bug with the animal protecting
+　　　　　　　　　┃　　　┃ + 　　　　         神兽保佑,代码无bug
+　　　　　　　　　┃　　　┃
+　　　　　　　　　┃　　　┃　　+
+　　　　　　　　　┃　 　 ┗━━━┓ + +
+　　　　　　　　　┃ 　　　　　┣┓
+　　　　　　　　　┃ 　　　　　┏┛
+　　　　　　　　　┗┓┓┏━━━┳┓┏┛ + + + +
+　　　　　　　　　 ┃┫┫　 ┃┫┫
+　　　　　　　　　 ┗┻┛　 ┗┻┛+ + + +
+-->
+<div th:replace="header :: head"></div>
+<article>
+    <!--banner begin-->
+    <div class="picsbox">
+        <div class="banner">
+            <div id="banner" class="fader">
+                <li th:each="b : ${pageBean.getList()}" th:if="${b.state==2}" class="slide"  ><a  th:href="@{/blog/}+${b.id}" target="_blank"><img   th:src="|${b.img_url}?imageView/1/w/800/h/500|" th:alt="${b.title}" src="/images/banner01.jpg"><span class="imginfo" th:text="${b.title}">别让这些闹心的套路，毁了你的网页设计!</span></a></li>
+                <div class="fader_controls">
+                    <div class="page prev" data-target="prev">&lsaquo;</div>
+                    <div class="page next" data-target="next">&rsaquo;</div>
+                    <ul class="pager_list">
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!--banner end-->
+        <div class="toppic sidebar">
+            <div class="about">
+                <p class="avatar"><img th:src="${config.icon}" src="images/avatar.jpg" alt=""></p>
+                <p class="abname" th:text="${config.username}+' | '+${config.name}"></p>
+                <p class="abposition" th:text="${config.job}"></p>
+                <p class="abtext" th:text="${config.summary}"></p>
+                <p class="abname" th:text="'访问人数 : &nbsp;'+${totalcount.countip}"></p>
+                <p class="abname" th:text="'总浏览量 : &nbsp;'+${totalcount.totalcount}"></p>
+                <p class="abname" th:text="'文章总数 : &nbsp;'+${pageBean.totalCount}"></p>
+                <p class="abname" th:text="'建站时间 : &nbsp;'+${#strings.substring(config.create_time,0,10)}"></p>
+
+            </div>
+        </div>
+    </div>
+    <div class="blank"></div>
+    <!--blogsbox begin-->
+    <div class="blogsbox">
+        <div class="blogs" data-scroll-reveal="enter bottom over 1s" th:each="bl : ${pageBean.getList()}" th:if="${bl.state==1}">
+            <h3 class="blogtitle"><a href="/" target="_blank"  th:text="${bl.title}" th:href="@{/blog/}+${bl.id}" >别让这些闹心的套路，毁了你的网页设计!</a></h3>
+            <span class="blogpic"><a href="/" title=""><img src="images/toppic01.jpg" th:src="|${bl.img_url}?imageView/1/w/200/h/200|" th:alt="${bl.title}"></a></span>
+            <p class="blogtext"  th:text="${bl.summary}"></p>
+            <div class="bloginfo">
+                <ul>
+<!--                    <li class="author"><a href="/" th:text="${config.name}">小张</a></li>-->
+                    <li class="lmname"><a th:href="@{|${bl.blogCategory.url}|}" th:text="${bl.blogCategory.name}"></a></li>
+                    <li class="timer"  th:text="${bl.create_time}">2018-5-13</li>
+                    <li class="view"><span  th:text="${bl.hits}">123</span>已阅读</li>
+                    <li class="like"  th:text="${bl.likeit}">123</li>
+                </ul>
+            </div>
+        </div>
+        <!--分页start-->
+        <div class="pagelist" th:if="${pageBean}"><a class="allpage"><b th:text="${pageBean.totalCount}">29</b></a>
+            &nbsp;&nbsp;<a th:href="@{|/?currentPage=0&pageSize=${pageBean.pageSize}|}"class="curPage">首页</a>&nbsp;&nbsp;
+            &nbsp;<a  th:href="@{|/?currentPage=${pageBean.currentPage-1}&pageSize=${pageBean.pageSize}|}">上一页</a>
+            &nbsp;<a  th:href="@{|/?currentPage=${pageBean.currentPage+1}&pageSize=${pageBean.pageSize}|}">下一页</a>
+            &nbsp;<a  th:href="@{|/?currentPage=${pageBean.totalPage}&pageSize=${pageBean.pageSize}|}">尾页</a>
+
+        </div>
+        <!--分页end-->
+    </div>
+    <!--blogsbox end-->
+    <div class="sidebar">
+        <div class="tuijian">
+            <h2 class="hometitle">点击排行</h2>
+<!--            <ul class="tjpic">-->
+            <!--                <i><img src="images/toppic01.jpg"></i>-->
+            <!--                <p><a href="/">别让这些闹心的套路，毁了你的网页设计</a></p>-->
+            <!--            </ul>-->
+            <ul class="sidenews">
+                <li th:each="list : ${listHitsBlog}"><i><img th:src="|${list.img_url}|" src="images/v2.jpg"></i>
+                    <p><a href="/" th:href="@{/blog/}+${list.id}" th:text="${list.title}">给我模板PSD源文件，我给你设计HTML！</a></p>
+                    <span th:text="${#strings.substring(list.create_time,0,10)}">2018-05-13</span></li>
+            </ul>
+        </div>
+        <div class="cloud">
+            <h2 class="hometitle">标签云</h2>
+            <ul >
+                <a th:href="@{${s.url}}" th:utext="${s.tag_name}" th:each="s : ${listTags}" >陌上花开</a>
+            </ul>
+        </div>
+        <div class="guanzhu" id="follow-us">
+            <h2 class="hometitle">关注我们 么么哒！</h2>
+            <ul>
+                <li class="tencent"><a th:href="|${config.github}|" target="_blank" ><span>GitHub</span><b th:text="${config.github}">https://github.com/wszhxo</b></a>
+                </li>
+                <li class="qq"><a href="/" target="_blank" ><span>QQ号</span><b th:text="${config.qq}">2500621077</b></a></li>
+                <li class="email"><a th:href="@{|http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=${config.qq}@qq.com|}" target="_blank" ><span>邮箱帐号</span><b th:text="${config.qq}+'@qq.com'">cuber.zhx@qq.com</b></a>
+                </li>
+                <li class="wxgzh" ><a href="/" target="_blank" ><span>微信公众号</span><b th:text="${config.wechatgzh}"></b></a></li>
+                <li class="wx"><img alt="张洪祥" th:src="|${config.wechat_icon}|"/></li>
+            </ul>
+        </div>
+    </div>
+</article>
+<!--引入尾部-->
+<div th:replace="footer :: foot"></div>
+<a href="#" class="cd-top">Top</a>
+</body>
+<!-- coderzhx.cn Baidu tongji analytics -->
+<script>
+    var _hmt = _hmt || [];
+    (function() {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?caa0531ea7b15e8427a1d309bc0ede9a";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    })();
+</script>
+</html>
