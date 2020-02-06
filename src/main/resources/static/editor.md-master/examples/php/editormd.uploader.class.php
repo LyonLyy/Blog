@@ -1,13 +1,13 @@
 <?php
 
-   /**
+   /*
     *
     * Editor.md PHP简易上传类（仅供演示用，生产环境使用还需谨慎考虑）
     *
     * @FileName: editormd.uploader.class.php
     * @Auther: Pandao
     * @E-mail: pandao@vip.qq.com
-    * @CreateTime: 2015-02-13 23:31:32
+    *
     * @UpdateTime: 2015-06-02 15:36:23
     * Copyright@2015 Editor.md all right reserved.
     */

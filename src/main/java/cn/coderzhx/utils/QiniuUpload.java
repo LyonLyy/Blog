@@ -10,8 +10,8 @@ import com.qiniu.storage.model.DefaultPutRet;
 import com.qiniu.util.Auth;
 
 /**
- * @author zhx
- * @create 2019-07-18-17
+ *
+ *
  * 上传图片到七牛云
  */
 public class QiniuUpload {

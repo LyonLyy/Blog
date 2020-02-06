@@ -1,8 +1,8 @@
 package cn.coderzhx.utils;
 
 /**
- * @author zhx
- * @create 2019-07-27-22
+ *
+ *
  */
 
 import javax.imageio.ImageIO;

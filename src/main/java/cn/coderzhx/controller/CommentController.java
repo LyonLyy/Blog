@@ -9,8 +9,8 @@ import org.springframework.web.bind.annotation.*;
 import javax.annotation.Resource;
 
 /**
- * @author zhx
- * @create 2019-07-25-14
+ *
+ *
  */
 @RequestMapping("/comment")
 @RestController

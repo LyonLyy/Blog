@@ -5,8 +5,8 @@ import org.springframework.stereotype.Component;
 import java.io.Serializable;
 
 /**
- * @author zhx
- * @create 2019-07-24-18
+ *
+ *
  */
 @Component
 public class Comment implements Serializable {

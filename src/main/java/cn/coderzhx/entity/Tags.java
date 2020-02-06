@@ -5,8 +5,8 @@ import org.springframework.stereotype.Component;
 import java.io.Serializable;
 
 /**
- * @author zhx
- * @create 2019-08-05-16
+ *
+ *
  */
 @Component
 public class Tags implements Serializable {

@@ -6,7 +6,7 @@
      * @FileName: upload.php
      * @Auther: Pandao
      * @E-mail: pandao@vip.qq.com
-     * @CreateTime: 2015-02-15 19:12:11  
+     *
      * @UpdateTime: 2015-02-15 20:47:52  
      * Copyright@2015 Editor.md all right reserved.
 	 */

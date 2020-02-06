@@ -5,8 +5,8 @@ import org.springframework.stereotype.Component;
 import java.io.Serializable;
 
 /**
- * @author zhx
- * @create 2019-07-27-19
+ *
+ *
  */
 @Component
 public class User implements Serializable {

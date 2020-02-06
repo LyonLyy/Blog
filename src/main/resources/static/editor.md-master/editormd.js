@@ -3732,7 +3732,7 @@
         return tocContainer;
     };
     
-    /**
+    /*
      *
      * 生成TOC下拉菜单
      * Creating ToC dropdown menu

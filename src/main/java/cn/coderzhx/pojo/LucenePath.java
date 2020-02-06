@@ -4,8 +4,8 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.stereotype.Component;
 
 /**
- * @author zhx
- * @create 2019-07-20-20
+ *
+ *
  */
 @Component
 @ConfigurationProperties(prefix="lucene")

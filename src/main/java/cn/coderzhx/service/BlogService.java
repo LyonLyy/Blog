@@ -8,8 +8,8 @@ import cn.coderzhx.pojo.PageBean;
 import java.util.List;
 
 /**
- * @author zhx
- * @create 2019-07-22-20
+ *
+ *
  */
 public interface BlogService {
     PageBean listBlogs(PageBean pageBean);

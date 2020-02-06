@@ -3654,7 +3654,7 @@
         return markedRenderer;
     };
     
-    /**
+    /*
      *
      * 生成TOC(Table of Contents)
      * Creating ToC (Table of Contents)

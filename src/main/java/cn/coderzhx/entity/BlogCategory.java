@@ -5,8 +5,8 @@ import org.springframework.stereotype.Component;
 import java.io.Serializable;
 
 /**
- * @author zhx
- * @create 2019-07-22-17
+ *
+ *
  */
 @Component
 public class BlogCategory implements Serializable {

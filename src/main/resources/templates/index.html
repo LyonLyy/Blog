@@ -68,7 +68,7 @@
                 <p class="abname" th:text="'访问人数 : &nbsp;'+${totalcount.countip}"></p>
                 <p class="abname" th:text="'总浏览量 : &nbsp;'+${totalcount.totalcount}"></p>
                 <p class="abname" th:text="'文章总数 : &nbsp;'+${pageBean.totalCount}"></p>
-                <p class="abname" th:text="'建站时间 : &nbsp;'+${#strings.substring(config.create_time,0,10)}"></p>
+
 
             </div>
         </div>
@@ -104,10 +104,7 @@
     <div class="sidebar">
         <div class="tuijian">
             <h2 class="hometitle">点击排行</h2>
-<!--            <ul class="tjpic">-->
-            <!--                <i><img src="images/toppic01.jpg"></i>-->
-            <!--                <p><a href="/">别让这些闹心的套路，毁了你的网页设计</a></p>-->
-            <!--            </ul>-->
+
             <ul class="sidenews">
                 <li th:each="list : ${listHitsBlog}"><i><img th:src="|${list.img_url}|" src="images/v2.jpg"></i>
                     <p><a href="/" th:href="@{/blog/}+${list.id}" th:text="${list.title}">给我模板PSD源文件，我给你设计HTML！</a></p>
@@ -128,8 +125,7 @@
                 <li class="qq"><a href="/" target="_blank" ><span>QQ号</span><b th:text="${config.qq}">2500621077</b></a></li>
                 <li class="email"><a th:href="@{|http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=${config.qq}@qq.com|}" target="_blank" ><span>邮箱帐号</span><b th:text="${config.qq}+'@qq.com'">cuber.zhx@qq.com</b></a>
                 </li>
-                <li class="wxgzh" ><a href="/" target="_blank" ><span>微信公众号</span><b th:text="${config.wechatgzh}"></b></a></li>
-                <li class="wx"><img alt="张洪祥" th:src="|${config.wechat_icon}|"/></li>
+
             </ul>
         </div>
     </div>

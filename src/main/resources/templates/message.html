@@ -92,18 +92,8 @@
             <p class="abposition" th:text="${config.job}"></p>
             <p class="abtext"  th:text="${config.summary}"></p>
         </div>
-        <div class="weixin">
-            <h2 class="hometitle">微信关注</h2>
-            <ul>
-                <img  alt="张洪祥" th:src="|${config.wechat_icon}|" />
-            </ul>
-        </div>
-        <div class="links">
-            <h2 class="hometitle">友情链接</h2>
-            <ul th:each="link : ${listLink}">
-                <li><a th:href="|${link.url}|" th:text="${link.name}" target="_blank">优秀个人博客</a></li>
-            </ul>
-        </div>
+
+
     </div>
 </div>
 <!--引入尾部-->

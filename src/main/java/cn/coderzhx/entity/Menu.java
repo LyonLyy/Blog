@@ -5,9 +5,9 @@ import org.springframework.stereotype.Component;
 import java.io.Serializable;
 
 /**
- * @author zhx
  *
- * @create 2019-07-16-14
+ *
+ *
  */
 @Component
 public class Menu implements Serializable {

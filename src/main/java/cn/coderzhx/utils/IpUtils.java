@@ -3,8 +3,8 @@ package cn.coderzhx.utils;
 import javax.servlet.http.HttpServletRequest;
 
 /**
- * @author zhx
- * @create 2019-07-29-18
+ *
+ *
  */
 public class IpUtils {
     public static String getIpAddr(HttpServletRequest request) {

@@ -3,10 +3,10 @@ package cn.coderzhx.utils;
 import net.sf.json.JSONObject;
 
 /**
- * @author zhx
  *
  *
- * @create 2019-07-27-20
+ *
+ *
  */
 public class LayuiJSON {
     //Layui返回格式的封装类

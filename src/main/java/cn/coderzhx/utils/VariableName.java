@@ -1,8 +1,8 @@
 package cn.coderzhx.utils;
 
 /**
- * @author zhx
- * @create 2019-07-18-18
+ *
+ *
  */
 public class VariableName {
     //    七牛AK

@@ -3,8 +3,8 @@ package cn.coderzhx.entity;
 import org.springframework.stereotype.Component;
 
 /**
- * @author zhx
- * @create 2019-08-15-15
+ *
+ *
  */
 @Component
 public class VisitCount {

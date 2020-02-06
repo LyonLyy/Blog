@@ -9,8 +9,8 @@ import cn.coderzhx.pojo.PageBean;
 import java.util.List;
 
 /**
- * @author zhx
- * @create 2019-08-11-18
+ *
+ *
  */
 public interface ConfigService {
     void editconfig(Config config,String name);

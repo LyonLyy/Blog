@@ -16,7 +16,7 @@ import java.util.Map;
 
 /**
  * Shiro配置类
- * @author coderzhx.cn QQ 2500621077
+ *
  *
  *1创建 ShiroFilterFactoryBean
  *

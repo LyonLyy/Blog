@@ -3,8 +3,8 @@ package cn.coderzhx.pojo;
 import org.springframework.stereotype.Component;
 
 /**
- * @author zhx
- * @create 2019-08-15-16
+ *
+ *
  */
 @Component
 public class Visit {

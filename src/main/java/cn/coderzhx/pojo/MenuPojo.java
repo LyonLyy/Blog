@@ -3,8 +3,8 @@ package cn.coderzhx.pojo;
 import org.springframework.stereotype.Component;
 
 /**
- * @author zhx
- * @create 2019-08-12-15
+ *
+ *
  */
 @Component
 public class MenuPojo {

@@ -5,8 +5,8 @@ import org.springframework.stereotype.Component;
 import java.util.List;
 
 /**
- * @author zhx
- * @create 2019-07-20-16
+ *
+ *
  */
 @Component
 public class PageBean<T> {
