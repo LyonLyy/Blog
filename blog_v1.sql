@@ -235,7 +235,7 @@ CREATE TABLE `user` (
 -- ----------------------------
 -- Records of user
 -- ----------------------------
-INSERT INTO `user` VALUES ('1', 'admin', 'a7fe0f564abf904823e35bd2f41d03c5');
+INSERT INTO `user` VALUES ('1', 'admin', '9cd4ee63e1125396c3cb1f7eb1e99f86');
 
 -- ----------------------------
 -- Table structure for `visitcount`
