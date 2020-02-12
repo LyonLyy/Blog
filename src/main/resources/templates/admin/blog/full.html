@@ -84,7 +84,7 @@
                                 <input type="file" name="file">
                             </div>
                             <img class="layui-upload-img" id="mypic" th:src="|${blog!=null?blog.img_url:''}|"  alt="预览图">
-                            <button type="button" class="layui-btn" id="sub">上传七牛云</button>
+
                             <input type="text" name="img_url" placeholder="显示回显路径" lay-verify="required" id="imgUrl"
                                    autocomplete="off" class="layui-input"  th:value="${blog!=null}?${blog.img_url}" >
                         </div>
@@ -134,8 +134,8 @@
 <!--        <button id="show-btn">Show editor</button>-->
 <!--        <button id="hide-btn">Hide editor</button>-->
 <!--        <button id="get-md-btn">获取Markdown</button>-->
-        <button id="put-md-btn">md文件输入</button>
-        <button id="get-html-btn">网页直接输入</button>
+        <button id="put-md-btn">获取文本内容</button>
+<!--        <button id="get-html-btn">网页直接输入</button>-->
 <!--        <button id="watch-btn">Watch</button>-->
 <!--        <button id="unwatch-btn">Unwatch</button>-->
 <!--        <button id="preview-btn">Preview HTML (Press Shift + ESC cancel)</button>-->
@@ -291,6 +291,7 @@
         });
         $("#put-md-btn").bind('click', function () {
             $("#content").val(testEditor.getMarkdown())
+            $("#htmlcontent").val(testEditor.getHTML())
 
         });
         /*
