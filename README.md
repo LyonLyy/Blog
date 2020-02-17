@@ -4,7 +4,7 @@
 
 
 ## 数据库设计
-嘻嘻嘻
+
 - 用户表user
 
 | 字段     | 类型    | 描述 |
@@ -115,17 +115,11 @@
 | description | varchar  |      | 简介              |
 | html_desc   | varchar  |      | html样式的 关于我 |
 | qq          | varchar  |      | qq                |
-| wechat      | varchar  |      | 微信              |
-| wechatgzh   | varchar  |      | 微信公众号        |
 | beian       | varchar  |      | 备案              |
-| weixinpay   | varchar  |      | 微信收款二维码    |
-| wechat_icon | varchar  |      | 微信二维码        |
-| Alipay      | varchar  |      | 支付宝收款二维码  |
 | keyword     | varchar  |      | 网站关键字        |
 | title       | varchar  |      | 网站标题          |
 | create_time | datetime |      | 建站时间          |
 | job         | varchar  |      | 职业              |
 | github      | varchar  |      |                   |
-| banquan     | varchar  |      | 版权信息          |
 |             |          |      |                   |
 
